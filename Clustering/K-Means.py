@@ -27,3 +27,13 @@ for i in range(1,11):
     
     
 plt.plot(range(1,11), result)
+plt.show()
+
+#hiyerarşik kümeleme
+
+from sklearn.cluster import AgglomerativeClustering
+
+ac = AgglomerativeClustering(n_clusters=3, linkage='manhattan')
+
+Y_predict=ac.fit_predict(X)
+print(Y_predict)
